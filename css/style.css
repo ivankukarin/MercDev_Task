@@ -14,18 +14,15 @@
 }
 
 
-
 body {
   margin: 0;
 	padding: 7.40vw 0 190px;
 	width: 100%;
   max-width: 100%;  
-  
     
   background-image: url(../img/background_1920.png);
   background-repeat: no-repeat;
-  background-size: cover;
-	
+  background-size: cover;	
   
   font-family: "GothamBold", "Arial", sans-serif;
 }
@@ -41,8 +38,7 @@ body {
   margin: 0 auto;
   padding: 0;
   width: 315px;
-  height: 69px;
-  
+  height: 69px;  
 }
 
 .access-menu {
@@ -53,9 +49,7 @@ body {
   margin-right: auto;
   background: #FFFFFF;
   box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-
-  
+  border-radius: 8px;  
 }
 
 .h1 {
@@ -66,7 +60,6 @@ body {
   text-align: center;
   text-transform: capitalize;
   letter-spacing: 0.2px;
-
   color: #262626;
 
   mix-blend-mode: normal;
@@ -76,13 +69,9 @@ body {
 
 
 .access-form {
-
-
   display: flex;
   flex-direction: column;
-  align-items: center;
-
-  
+  align-items: center;  
 }
 
 .form-input {
@@ -96,12 +85,13 @@ body {
   border-radius: 4px;
   border: 2px solid #F1F1F1;
 
-  font-family: "GothamMedium", "Arial", serif;
+  font-family: "GothamBold", "Arial", serif;
   font-size: 16px;
+  font-weight: bold;
   color: #262626;
-
-  mix-blend-mode: normal;
   
+  opacity: 0.8;
+  mix-blend-mode: normal;  
 }
 
 .form-input::placeholder {
@@ -117,9 +107,7 @@ outline: none;
 border: 3px solid rgba(151, 151, 151, 0.25);
 box-sizing: border-box;
 border-radius: 4px;
-
 }
-
 
 .access-form-button {
   width: 146px;
@@ -135,7 +123,6 @@ border-radius: 4px;
   box-shadow: 0px 4px 16px rgba(237, 65, 89, 0.4);
   border-radius: 100px;
   border: 0cm;
-
 }
 
 .access-form-button:hover {
@@ -143,7 +130,6 @@ border-radius: 4px;
   box-shadow: 0px 6px 20px rgba(237, 65, 89, 0.4);
   border-radius: 100px;
   color: #ED4159;
-
 }
 
 .access-form-button:active {
@@ -151,7 +137,6 @@ border-radius: 4px;
   box-shadow: 0px 2px 10px rgba(237, 65, 89, 0.5);
   border-radius: 100px;
   color: #ED4159;
-
 }
 
 .incorrect-password {
@@ -169,15 +154,6 @@ border-radius: 4px;
   box-sizing: border-box;
   background: rgba(237, 65, 89, 0.25);
   border-radius: 4px;
-}
-
-.unhide {
-  display: inline-flex;
-  
-}
-
-.hide {
-  display: none;
 }
 
 .red-border-font {
@@ -221,9 +197,7 @@ border-radius: 4px;
   color: #262626;
   mix-blend-mode: normal;
   opacity: 0.8;
-
 }
-
 
 
 
@@ -268,8 +242,7 @@ border-radius: 4px;
   }
 
   .form-input::placeholder {
-    font-size: 5vw;
-        
+    font-size: 5vw;        
   }
 
   .form-input:focus {
@@ -290,8 +263,7 @@ border-radius: 4px;
 
     font-size: 3.75vw;
         
-  }
-  
+  }  
   
   .access-form-button {
   width: 45.31vw;
@@ -306,10 +278,6 @@ border-radius: 4px;
   border-radius: 100px;
   border: 0cm;
   }
-
-  .unhide {
-  display: flex;  
-  }  
 
   .profile-preview {
     width: 26.88vw;
@@ -336,4 +304,10 @@ border-radius: 4px;
 
 }
 
+.hide {
+  display: none;
+}
 
+.unhide {
+  display: flex;
+}

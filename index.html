@@ -24,28 +24,28 @@
 
   <section class="access-menu"> 
 
-    <div class="autoriz">
+    <div class="authoriz">
       <h1 class="h1">Log In</h1>
-      <form class="access-form" action="" method="post">
+      <form class="access-form">
         <input class="form-input email-form-input" type="email" placeholder="E-Mail" required>
         <input class="form-input password-form-input" type="password"  placeholder="Password" required>
         <div class= "incorrect-password">E-Mail or password is incorrect</div> 
-        <button class="access-form-button" type="submit">Login</button>      
+        <button class="access-form-button" type="submit" id="btnLogin">Login</button>      
       </form>
     </div>
 
     <div class="profile">
       <div class="profile-preview">
-        <img src="img/avatar_default.png" alt="avatar" class="profile-avatar">
+        <img src="img/avatar_default.jpg" alt="avatar" class="profile-avatar">
       </div>
       <div class="profile-body">
         <h1 class="profile-title">
-          <span class="profile-name">Helena Joseph</span>
+          <span class="profile-name">Nikola Tesla</span>
         </h1>
-        <button class="access-form-button" type="button">Logout</button> 
+        <button class="access-form-button" type="button" id="btnLogout" >Logout</button> 
       </div>
     </div>
   </section>
-  
+  <script src="script/main.js"></script>
 </body>
 </html>
