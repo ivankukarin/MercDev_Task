@@ -22,24 +22,7 @@ const logout = () => {
 const setNameAvatar = (name = 'Nikola Tesla', avatar = 'img/avatar_default.jpg') => {
   profileName.textContent = name;
   profileAvater.src = avatar;
-
 };
-
-// btnLogin.addEventListener('submit', (evt)=>{
-//   evt.preventDefault();
-//   
-//   let xhr = new XMLHttpRequest();
-//   xhr.open('POST', 'https://us-central1-mercdev-academy.cloudfunctions.net/login');
-//   xhr.setRequestHeader('Content-Type', 'application/json');
-//   xhr.onreadystatechange = handleFunc;
-
-//   function handleFunc (){
-//     if (xhr.readyState === 4 && xhr.status === 200){
-//       console.log(xhr.responseText)
-//     }
-//   }
-// })
-
 
 btnLogin.addEventListener('click', (evt)=>{
   evt.preventDefault();
@@ -60,19 +43,33 @@ btnLogin.addEventListener('click', (evt)=>{
     },  
     body: JSON.stringify(user)  
   })
-  .then(response => response.json(),)  
-  .then(function (data) {  
+  .then(response => {
+    status = response.status;
+    return response.json()})  
+  .then(function (data) {
+   
+    if (status == 200) {
     console.log('Request succeeded with JSON response', data);
     let accountName = data.name;
-    let accountAvatar = data.photoUrl;
-    console.log(accountName);
+    let accountAvatar = data.photoUrl;    
 
     setNameAvatar (accountName, accountAvatar);
 
-    gotCorretPassword(); 
+    gotCorretPassword();
+    } else {
+      console.log ('Request failed', data.error);
+      wrongPassword.textContent = data.error;
+      elemEmail.classList.add('red-border-font');
+      wrongPassword.classList.add('unhide');
+      elemEmail.addEventListener('focus', ()=>{
+        elemEmail.classList.remove('red-border-font');
+      wrongPassword.classList.remove('unhide');
+      })
+     }
   })  
-  .catch(function (error) {  
-    console.log('Request failed', error);  
+  .catch(function(error) {      
+    console.log('Request failed CATCH', error);
+    
   });
 
   // let result = await response.json();
