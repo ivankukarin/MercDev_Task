@@ -67,12 +67,8 @@ btnLogin.addEventListener('click', (evt)=>{
      }
   })  
   .catch(function(error) {      
-    console.log('Request failed CATCH', error);
-    
+    console.log('Request failed', error);    
   });
-
-  // let result = await response.json();
-  // console.log(result.message)
 })
 
 btnLogout.addEventListener('click', (evt)=>{
