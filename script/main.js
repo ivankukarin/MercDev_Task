@@ -56,8 +56,7 @@ btnLogin.addEventListener('click', (evt)=>{
     setNameAvatar (accountName, accountAvatar);
 
     gotCorretPassword();
-    } else {
-      console.log ('Request failed', data.error);
+    } else {      
       wrongPassword.textContent = data.error;
       elemEmail.classList.add('red-border-font');
       wrongPassword.classList.add('unhide');
